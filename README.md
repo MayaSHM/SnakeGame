@@ -1,3 +1,19 @@
-# Snake
+# 项目名称
 
-A simple snake game based on easyx graphic library.
+## 介绍
+这是一个使用 **easyx** 库开发的图形界面应用程序。
+
+## 依赖
+该项目依赖于 **easyx** 库。你需要安装并配置 **easyx** 才能运行项目。
+
+## 安装 easyx 库
+1. 下载并安装 **easyx** 库：
+   - 访问 [easyx 官方网站](http://www.easyx.cn/) 或在 GitHub 上找到相关资源。
+   - 按照文档中的步骤进行安装。
+
+2. 配置环境变量：
+   - 将 `easyx` 的头文件和库文件路径添加到你的编译器配置中（具体步骤可以参考 easyx 文档）。
+   - 如果你使用的是 Visual Studio，可以将 `easyx` 库的路径添加到 **项目属性** > **VC++ 目录** 中。
+
+## 使用方法
+运行项目并根据提示使用 **easyx** 提供的图形函数。
