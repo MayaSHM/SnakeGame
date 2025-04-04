@@ -41,7 +41,8 @@ void GameScene::updateHeadCoor() {
 bool GameScene::isCollisionWithEdges() {
 	if (prevHeadCoor.first  < 0 + EDGE_WIDTH || prevHeadCoor.first  >= WINDOW_WIDTH -  EDGE_WIDTH ||
 		prevHeadCoor.second < 0 + EDGE_WIDTH || prevHeadCoor.second >= WINDOW_HEIGHT - EDGE_WIDTH) {
-		PlaySound(L".\\resource\\maou_se_battle_explosion06.wav", NULL, SND_ASYNC | SND_NODEFAULT);
+		//PlaySound(L".\\resource\\maou_se_battle_explosion06.wav", NULL, SND_ASYNC | SND_NODEFAULT);
+		PlaySound(MAKEINTRESOURCE(IDR_WAVE1), NULL, SND_ASYNC | SND_NODEFAULT | SND_RESOURCE);
 		return TRUE;
 	}
 	else {
@@ -61,7 +62,8 @@ void GameScene::afterEatFoods() {
 		food.regenerate(prevAllCoor);
 		m_score += 1;
 		// 播放音效
-		PlaySound(L".\\resource\\se3.wav", NULL, SND_ASYNC | SND_NODEFAULT);
+		//PlaySound(L".\\resource\\se3.wav", NULL, SND_ASYNC | SND_NODEFAULT);
+		PlaySound(MAKEINTRESOURCE(IDR_WAVE2), NULL, SND_ASYNC | SND_NODEFAULT | SND_RESOURCE);
 	}
 }
 
@@ -77,10 +79,11 @@ auto GameScene::getSnakeInst() {
 void GameScene::drawScreen() {
 	BeginBatchDraw();
 	cleardevice();
+	// 绘制背景
 	setfillcolor(WHITE);
 	fillrectangle(0, 0, WINDOW_WIDTH - 1, WINDOW_HEIGHT - 1);
 	setfillcolor(BLACK);
-	fillrectangle(EDGE_WIDTH, EDGE_WIDTH, WINDOW_WIDTH - EDGE_WIDTH - 1, WINDOW_HEIGHT - EDGE_WIDTH - 1);
+	fillrectangle(EDGE_WIDTH, EDGE_WIDTH, WINDOW_WIDTH - EDGE_WIDTH, WINDOW_HEIGHT - EDGE_WIDTH);
 	snake.draw();
 	food.draw();
 	// 显示当前分数

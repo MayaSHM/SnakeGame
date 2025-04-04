@@ -147,11 +147,15 @@
     <ClInclude Include="include\Sprite.h" />
     <ClInclude Include="include\Utils.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="resource1.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resource\Food_10.png" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="resource\maou_se_battle_explosion06.wav" />
-    <Media Include="resource\maou_se_system49.wav" />
     <Media Include="resource\se3.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

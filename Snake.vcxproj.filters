@@ -59,15 +59,19 @@
     <ClInclude Include="resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="resource1.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resource\Food_10.png">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Media Include="resource\maou_se_battle_explosion06.wav">
-      <Filter>资源文件</Filter>
-    </Media>
-    <Media Include="resource\maou_se_system49.wav">
       <Filter>资源文件</Filter>
     </Media>
     <Media Include="resource\se3.wav">
